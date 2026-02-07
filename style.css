@@ -108,6 +108,34 @@ body {
   background: #1ebe5d;
 }
 
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty-control button {
+  padding: 2px 8px;
+  border: none;
+  background: #c8a951;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 /* SECTION */
 .section {
   padding: 60px 20px;
@@ -229,3 +257,4 @@ footer {
   font-size: 14px;
 
 }
+
