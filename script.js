@@ -1,7 +1,7 @@
 let cart = [];
 let total = 0;
 
-const whatsappNumber = "60198765432"; // tukar nombor ni
+const whatsappNumber = "60122458995";
 
 function addToCart(name, price) {
   cart.push({ name, price });
@@ -51,3 +51,4 @@ function toggleCartDropdown() {
   dropdown.style.display =
     dropdown.style.display === "block" ? "none" : "block";
 }
+
