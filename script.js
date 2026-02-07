@@ -68,7 +68,7 @@ function updateCart() {
 
   message += `💰 *TOTAL: RM ${total}*`;
 
-  cartTotal.innerText = "Total: RM " + total;
+  cartTotal.innerText = "Total: RM " + total.toFixed(2);
   cartCount.innerText = cart.reduce((sum, i) => sum + i.qty, 0);
 
   checkoutBtn.href = `https://wa.me/${whatsappNumber}?text=${message}`;
@@ -100,3 +100,4 @@ function toggleCartDropdown() {
   dropdown.style.display =
     dropdown.style.display === "block" ? "none" : "block";
 }
+
