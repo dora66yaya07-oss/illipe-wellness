@@ -26,11 +26,11 @@ function updateCart() {
 
   cart.forEach(item => {
     const li = document.createElement("li");
-    li.innerHTML ='${item.name} <span>RM ${item.price}</span>';
+    li.innerHTML = `${item.name} <span>RM ${item.price}</span>`;
     cartItems.appendChild(li);
   });
 
-  cartTotal.innerText = "Total: RM " + total;
+  cartTotal.innerText = `Total: RM ${total}`;
 }
 
 function toggleCartDropdown() {
