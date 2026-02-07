@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Illipe Wellness Co.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / HERO -->
+  <header class="hero">
+    <h1>Illipe Wellness Co.</h1>
+    <p>Glow Without Limits</p>
+
+    <div class="cart-container">
+      <div class="cart-icon" onclick="toggleCartDropdown()">
+        🛒 <span id="cart-count">0</span>
+      </div>
+      <div id="cart-dropdown" class="cart-dropdown">
+        <p id="empty-cart">Your cart is empty.</p>
+        <ul id="cart-items"></ul>
+        <p id="cart-total"></p>
+      </div>
+    </div>
+
+    <a href="#products" class="btn">Shop Now</a>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <h2>About Us</h2>
+    <p class="text">
+      Illipe Wellness Co. is a skincare brand dedicated to enhancing natural
+      beauty through nourishing formulations inspired by Illipe (Engkabang).
+    </p>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section light" id="products">
+    <h2>Our Products</h2>
+
+    <div class="product-grid">
+
+      <div class="product">
+        <img src="images/product1.jpg">
+        <h3>Illipe Moisturizing Cream</h3>
+        <p class="desc">Deep hydration for soft skin</p>
+        <p class="price">RM 79.00</p>
+        <button class="buy-btn" onclick="addToCart('Illipe Moisturizing Cream',79)">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="images/product2.jpg">
+        <h3>Illipe Gentle Cleanser</h3>
+        <p class="desc">Gentle daily cleanser</p>
+        <p class="price">RM 49.00</p>
+        <button class="buy-btn" onclick="addToCart('Illipe Gentle Cleanser',49)">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="images/product3.jpg">
+        <h3>Illipe Hydrating Serum</h3>
+        <p class="desc">Lightweight & fast absorb</p>
+        <p class="price">RM 89.00</p>
+        <button class="buy-btn" onclick="addToCart('Illipe Hydrating Serum',89)">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="images/product4.jpg">
+        <h3>Illipe Balancing Toner</h3>
+        <p class="desc">Refresh & balance skin</p>
+        <p class="price">RM 45.00</p>
+        <button class="buy-btn" onclick="addToCart('Illipe Balancing Toner',45)">Buy Now</button>
+      </div>
+
+      <div class="product">
+        <img src="images/product5.jpg">
+        <h3>Illipe Nourishing Mask</h3>
+        <p class="desc">Intensive skin care</p>
+        <p class="price">RM 59.00</p>
+        <button class="buy-btn" onclick="addToCart('Illipe Nourishing Mask',59)">Buy Now</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SHARE + QR -->
+  <section class="section">
+    <h2>Share Our Website</h2>
+
+    <p class="text">
+      Visit us at:<br>
+      <a href="https://username.github.io/illipe-wellness" target="_blank" rel="noopener">
+        https://username.github.io/illipe-wellness
+      </a>
+    </p>
+
+    <div class="qr-container">
+      <div class="qr-box">
+        <img 
+          src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://username.github.io/illipe-wellness"
+          alt="QR Website">
+        <p>Scan for Website</p>
+      </div>
+
+      <div class="qr-box">
+        <img 
+          src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://wa.me/6012458995"
+          alt="QR WhatsApp">
+        <p>Contact via WhatsApp</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/60122458995" class="whatsapp-float" target="_blank">💬</a>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Illipe Wellness Co. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
