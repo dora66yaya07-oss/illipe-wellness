@@ -27,18 +27,17 @@ function updateCart() {
 
   if (cart.length === 0) {
     emptyCart.style.display = "block";
-    checkoutBtn.style.display = "none";
+    if (checkoutBtn) checkoutBtn.style.display = "none";
     cartCount.innerText = 0;
     cartTotal.innerText = "";
     return;
   }
 
   emptyCart.style.display = "none";
-  checkoutBtn.style.display = "block";
+  if (checkoutBtn) checkoutBtn.style.display = "block";
 
   let total = 0;
-  let message =
-    "🧾 *INVOICE – Illipe Wellness Co.*%0A%0A";
+  let message = "🧾 *INVOICE – Illipe Wellness Co.*%0A%0A";
 
   cart.forEach((item, index) => {
     const subtotal = item.price * item.qty;
@@ -68,12 +67,14 @@ function updateCart() {
   });
 
   total = Number(total.toFixed(2));
-  message += `💰 *TOTAL: RM ${totaltoFixed(2)}*`;
+  message += `💰 *TOTAL: RM ${total.toFixed(2)}*`;
 
   cartTotal.innerText = "Total: RM " + total.toFixed(2);
   cartCount.innerText = cart.reduce((sum, i) => sum + i.qty, 0);
 
+  if (checkoutBtn) {
   checkoutBtn.href = `https://wa.me/${whatsappNumber}?text=${message}`;
+  }
 }
 
 function changeQty(index, change) {
@@ -102,5 +103,3 @@ function toggleCartDropdown() {
   dropdown.style.display =
     dropdown.style.display === "block" ? "none" : "block";
 }
-
-
