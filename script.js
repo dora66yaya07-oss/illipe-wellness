@@ -1,5 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-const whatsappNumber = "60198765432";
+const whatsappNumber = "60122458995";
 
 updateCart();
 
