@@ -41,18 +41,19 @@ function updateCart() {
     "🧾 *INVOICE – Illipe Wellness Co.*%0A%0A";
 
   cart.forEach((item, index) => {
-    total += item.price * item.qty;
+    const subtotal = item.price * item.qty;
+    total += subtotal;
 
     message +=
       `${index + 1}. ${item.name}%0A` +
-      `   Qty: ${item.qty} x RM ${item.price}%0A` +
-      `   Subtotal: RM ${item.price * item.qty}%0A%0A`;
+      `   Qty: ${item.qty} x RM ${item.price.toFixed(2)}%0A` +
+      `   Subtotal: RM ${subtotal.toFixed(2)}%0A%0A`;
 
     cartItems.innerHTML += `
       <li class="cart-item">
         <div>
           ${item.name}<br>
-          RM ${item.price}
+          RM ${item.price.toFixed(2)}
         </div>
 
         <div class="qty-control">
@@ -66,7 +67,8 @@ function updateCart() {
     `;
   });
 
-  message += `💰 *TOTAL: RM ${total}*`;
+  total = Number(total.toFixed(2));
+  message += `💰 *TOTAL: RM ${totaltoFixed(2)}*`;
 
   cartTotal.innerText = "Total: RM " + total.toFixed(2);
   cartCount.innerText = cart.reduce((sum, i) => sum + i.qty, 0);
@@ -100,4 +102,5 @@ function toggleCartDropdown() {
   dropdown.style.display =
     dropdown.style.display === "block" ? "none" : "block";
 }
+
 
